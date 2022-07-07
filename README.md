@@ -15,19 +15,15 @@ For more information, please refer to EnvPool's [GitHub](https://github.com/sail
 Run
 
 ```bash
-$ python mujoco_sac.py --task Ant-v3
+$ python mujoco_ppo.py --task Ant-v3
 ```
 
 Logs is saved in `./log/` and can be monitored with tensorboard.
 
-```bash
-$ tensorboard --logdir log
-```
-
-You can also reproduce the benchmark (e.g. SAC in Ant-v3) with the example script we provide under `examples/mujoco/`:
+You can also reproduce the benchmark (e.g. PPO in Ant-v3) with the example script
 
 ```bash
-$ ./run_experiments.sh Ant-v3 sac
+$ ./run_experiments.sh Ant-v3 ppo
 ```
 
 This will start 10 experiments with different seeds.
@@ -36,7 +32,7 @@ Now that all the experiments are finished, we can convert all tfevent files into
 
 ```bash
 # generate csv
-$ ./tools.py --root-dir ./results/Ant-v3/sac
+$ ./tools.py --root-dir ./results/Ant-v3/ppo
 # generate figures
 $ ./plotter.py --root-dir ./results/Ant-v3 --shaded-std --legend-pattern "\\w+"
 # generate numerical result (support multiple groups: `--root-dir ./` instead of single dir)
