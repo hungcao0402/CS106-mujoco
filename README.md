@@ -27,8 +27,24 @@ $ ./plotter.py --root-dir ./results/Ant-v3 --shaded-std --legend-pattern "\\w+"
 # generate numerical result (support multiple groups: `--root-dir ./` instead of single dir)
 $ ./analysis.py --root-dir ./results --norm
 ```
-
+## Example benchmark
 <img src="./results/Ant-v3/figure.png" width="500" height="450">
+
+## Docker
+
+For being convenient, We provide Dockerfile which could be used for running training or you can just install requiments.txt
+
+### Build
+
+```bash
+docker built -t tianshou .
+```
+
+### Run 
+
+```bash
+docker run -it --gpus device=0 --rm -v "$PWD":/tianshou tianshou 
+```
 
 ## Result
 All logging and trained model are located in ```results``` folder.
@@ -54,18 +70,3 @@ The ```results``` folder structure:
 ...
 ```
 
-## Docker
-
-For being convenient, We provide Dockerfile which could be used for running training or you can just install requiments.txt
-
-### Build
-
-```bash
-docker built -t tianshou .
-```
-
-### Run 
-
-```bash
-docker run -it --gpus device=0 --rm -v "$PWD":/tianshou tianshou 
-```
