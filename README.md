@@ -28,23 +28,43 @@ $ ./plotter.py --root-dir ./results/Ant-v3 --shaded-std --legend-pattern "\\w+"
 $ ./analysis.py --root-dir ./results --norm
 ```
 
-## Example benchmark
-
 <img src="./results/Ant-v3/figure.png" width="500" height="450">
 
-Other graphs can be found under `results/`
+## Result
+All logging and trained model are located in ```results``` folder.
 
-##Docker
+The ```results``` folder structure:
+```
++-- results
+|   +-- Ant-v3
+|       +-- ppo
+|           +-- 0                                                     - seed 0
+|             +-- events.out.tfevents.1656182884.0f40ec0f35c4.15.0    - Tensorboard file
+|             +-- policy.pth                                          - Model file
+|             +-- test_reward.csv                                     - result file
+|           +-- 1                                                     - seed 1
+...
+|       +-- ddpg
+|       +-- ppo
+|       +-- figure.png                                                - Benchmark of three algorithms 
+...
+|   +-- HalfCheetah-v3
+|   +-- Swimmer-v3
+|   +-- Walker2d-v3
+...
+```
+
+## Docker
 
 For being convenient, We provide Dockerfile which could be used for running training or you can just install requiments.txt
 
-###Build
+### Build
 
 ```bash
 docker built -t tianshou .
 ```
 
-###Run 
+### Run 
 
 ```bash
 docker run -it --gpus device=0 --rm -v "$PWD":/tianshou tianshou 
