@@ -1,3 +1,8 @@
+## Install 
+
+```bash
+pip install tianshou envpool glfw imageio
+```
 
 ## Usage
 
