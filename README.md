@@ -1,14 +1,3 @@
-## EnvPool
-
-We highly recommend using envpool to run the following experiments. To install, in a linux machine, type:
-
-```bash
-pip install envpool
-```
-
-After that, `make_mujoco_env` will automatically switch to envpool's Mujoco env. EnvPool's implementation is much faster (about 2\~3x faster for pure execution speed, 1.5x for overall RL training pipeline in average) than python vectorized env implementation, and it's behavior is consistent to gym's Mujoco env.
-
-For more information, please refer to EnvPool's [GitHub](https://github.com/sail-sg/envpool/) and [Docs](https://envpool.readthedocs.io/en/latest/api/mujoco.html).
 
 ## Usage
 
@@ -44,3 +33,19 @@ $ ./analysis.py --root-dir ./results --norm
 <img src="./results/Ant-v3/figure.png" width="500" height="450">
 
 Other graphs can be found under `results/`
+
+##Docker
+
+For being convenient, We provide Dockerfile which could be used for running training or you can just install requiments.txt
+
+###Build
+
+```bash
+docker built -t tianshou .
+```
+
+###Run 
+
+```bash
+docker run -it --gpus device=0 --rm -v "$PWD":/tianshou tianshou 
+```
