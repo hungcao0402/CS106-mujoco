@@ -45,6 +45,6 @@ $ ./analysis.py --root-dir ./results --norm
 
 ## Example benchmark
 
-<img src="./results/Ant-v3/figure.png.png" width="500" height="450">
+<img src="./results/Ant-v3/figure.png" width="500" height="450">
 
 Other graphs can be found under `results/`
