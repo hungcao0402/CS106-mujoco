@@ -57,9 +57,10 @@ The ```results``` folder structure:
 |           +-- 0                                                     - seed 0
 |             +-- events.out.tfevents.1656182884.0f40ec0f35c4.15.0    - Tensorboard file
 |             +-- policy.pth                                          - Model file
-|             +-- test_reward.csv                                     - result file
+|             +-- test_reward.csv                                     
 |           +-- 1                                                     - seed 1
 ...
+|           +-- test_reward_10seeds.csv                               - result file      
 |       +-- ddpg
 |       +-- ppo
 |       +-- figure.png                                                - Benchmark of three algorithms 
