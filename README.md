@@ -42,7 +42,7 @@ For being convenient, We provide Dockerfile which could be used for running trai
 ### Build
 
 ```bash
-docker built -t tianshou .
+docker build -t tianshou .
 ```
 
 ### Run 
