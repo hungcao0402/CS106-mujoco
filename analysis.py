@@ -88,7 +88,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--xlim',
         type=int,
-        default=1000000,
+        default=3000000,
         help='x-axis limitation (default: 1000000)'
     )
     parser.add_argument('--root-dir', type=str)
